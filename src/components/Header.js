@@ -64,6 +64,8 @@ export const Header = (props) => {
         className={"vmv-header__monogram"}
         width={65}
         height={65}
+        placeholder={'none'}
+        loading="eager"
       ></StaticImage>
       <HeaderLocalNav items={navItemsData}></HeaderLocalNav>
       <HeaderNavButtons></HeaderNavButtons>

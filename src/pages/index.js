@@ -16,7 +16,7 @@ const IndexPage = (props) => {
         <Logo />
       </div>
       <div className="tastings">
-        <StaticImage loading="eager" className="tastings-img" layout="fullWidth" src="../images/tastings.png" alt="tastings pic" />
+        <StaticImage className="tastings-img" layout="fullWidth" src="../images/tastings.png" alt="tastings pic" />
         <div className="tastings__text">
           <div className="tastings__title">Tastings</div>
           <div className="tastings__blurb">
