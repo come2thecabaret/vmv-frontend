@@ -3,7 +3,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 import HeaderLocalNav from './HeaderLocalNav'
 import HeaderNavButtons from './HeaderNavButtons';
 import Monogram from '../images/monogram.inline.svg'
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
 
 export const Header = (props) => {
@@ -39,12 +39,14 @@ export const Header = (props) => {
                     current
                   }
                 }
+                _type
               }
               ... on SanityPage {
                 title
                 slug {
                   current
                 }
+                _type
               }
             }
           }
@@ -52,7 +54,7 @@ export const Header = (props) => {
       }
     }
   `)
-  console.log(data.allSanityHeader.edges[0].node.internalLinks)
+  const navItemsData = data.allSanityHeader.edges[0].node.internalLinks;
 
   return (
     <div className={`vmv-header ${pageScroll}`}>
@@ -63,8 +65,7 @@ export const Header = (props) => {
         width={65}
         height={65}
       ></StaticImage>
-      <img src={Monogram} style={{ height: "65px" }} />
-      <HeaderLocalNav></HeaderLocalNav>
+      <HeaderLocalNav items={navItemsData}></HeaderLocalNav>
       <HeaderNavButtons></HeaderNavButtons>
     </div>
   )

@@ -9,13 +9,13 @@ const HeaderNavButtons = function (props) {
 
   return (
     <div className="vmv-header__nav-buttons">
-      <a>
+      <a href="#">
         <FontAwesomeIcon icon={faFacebookSquare} size="2x" color="#0E0A0A" />
       </a>
-      <a>
+      <a href="#">
         <FontAwesomeIcon icon={faTwitterSquare} size="2x" color="#0E0A0A" />
       </a>
-      <a>
+      <a href="#">
         <FontAwesomeIcon icon={faInstagram} size="2x" color="#0E0A0A" />
       </a>
       <Button

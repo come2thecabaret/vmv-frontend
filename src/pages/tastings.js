@@ -1,8 +1,5 @@
 import * as React from "react"
 import { Header } from "../components/Header"
-import { StaticImage } from 'gatsby-plugin-image';
-import HeroImage from '../images/hero.webp'
-import Logo from '../images/big-logo.inline.svg'
 import "../styles.scss"
 import { FeatureHeader } from "../components/FeatureHeader";
 import { FeatureHero } from "../components/FeatureHero";

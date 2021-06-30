@@ -8,7 +8,6 @@ import "../styles.scss"
 
 
 const IndexPage = (props) => {
-  console.log(props)
   return (
     <main>
       <title>Home Page</title>

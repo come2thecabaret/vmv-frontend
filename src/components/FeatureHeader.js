@@ -1,9 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'gatsby';
-import { StaticImage } from 'gatsby-plugin-image';
-import HeaderLocalNav from './HeaderLocalNav'
-import HeaderNavButtons from './HeaderNavButtons';
-import Monogram from '../images/monogram.inline.svg'
+import React, { } from 'react';
 import Logo from '../images/big-logo.inline.svg'
 import FeatureHeaderPattern from '../images/feature-header-pattern.webp'
 
