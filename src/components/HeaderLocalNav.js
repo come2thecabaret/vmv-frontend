@@ -9,8 +9,25 @@ const HeaderLocalNav = function (props) {
       <Link to="/">Home</Link>
       <Link to="/">About Us</Link>
       <Link to="/">Wines</Link>
-      <NavDropdown label="Visit"></NavDropdown>
-      <NavDropdown label="Events"></NavDropdown>
+      <NavDropdown label="Visit">
+        <li>
+          <Link to="/">Tastings</Link>
+        </li>
+        <li>
+          <Link to="/">Tours</Link>
+        </li>
+      </NavDropdown>
+      <NavDropdown label="Events">
+        <li>
+          <Link to="/">Private Gatherings</Link>
+        </li>
+        <li>
+          <Link to="/">Upcoming Events</Link>
+        </li>
+        <li>
+          <Link to="/">Weddings</Link>
+        </li>
+      </NavDropdown>
       <Link to="/">Contact Us</Link>
     </div>
   )

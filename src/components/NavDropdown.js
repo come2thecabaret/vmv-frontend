@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'gatsby';
 
 const NavDropdown = function (props) {
+  console.log(props.children)
   const [dropdownIsOpen, setDropdownIsOpen] = useState(false);
   const setDropdownState = () => {
     if (dropdownIsOpen) {
@@ -15,12 +16,7 @@ const NavDropdown = function (props) {
       <div className="navbar__dropdown">
         <div className={`navbar__dropdown-label ${dropdownIsOpen}`} onClick={() => setDropdownState()}>{props.label}</div>
         <ul className={"navbar__dropdown-children"}>
-          <li>
-            <Link to="/">Tastings</Link>
-          </li>
-          <li>
-            <Link to="/">Tours</Link>
-          </li>
+          {props.children}
         </ul>
       </div>
     </>

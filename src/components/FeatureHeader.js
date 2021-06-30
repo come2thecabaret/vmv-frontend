@@ -8,7 +8,7 @@ export const FeatureHeader = (props) => {
       <div className={'feature-header__logo'}>
         <Logo />
       </div>
-      <div className={'feature-header__title'}>{props.title}</div>
+      <h1 className={'shadow'}>{props.title}</h1>
 
     </div>
   )

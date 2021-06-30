@@ -5,6 +5,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 import HeroImage from '../images/hero.webp'
 import Logo from '../images/big-logo.inline.svg'
 import "../styles.scss"
+import QuickLinks from "../components/QuickLinks";
 
 
 const IndexPage = (props) => {
@@ -15,11 +16,11 @@ const IndexPage = (props) => {
       <div className="vmv-hero" style={{ backgroundImage: `url(${HeroImage})` }}>
         <Logo />
       </div>
-      <div className="tastings">
+      <section className="tastings">
         <StaticImage className="tastings-img" layout="fullWidth" src="../images/tastings.png" alt="tastings pic" />
         <div className="tastings__text">
-          <div className="tastings__title">Tastings</div>
-          <div className="tastings__blurb">
+          <h2 className="">Tastings</h2>
+          <div className="text-body-regular light">
             <p>Wine Tasting at Virginia Mountain Vineyards brings together the best that
               Virginia has to offer  -  panoramic views of the Blue Ridge Mountains and
               an exceptional wine tasting experience.</p>
@@ -29,7 +30,21 @@ const IndexPage = (props) => {
           </div>
           <Link className="tastings__button" to="/tastings/">learn more +</Link>
         </div>
-      </div>
+      </section>
+      <QuickLinks></QuickLinks>
+      <section className="tours">
+        <StaticImage className="tours-img" layout="fullWidth" src="../images/tours.webp" alt="tastings pic" />
+        <div className={'tours__text'}>
+          <h2 className={'dark spaced-right'}>Tours</h2>
+          <div className={'tours__text-body'}>
+            <div className={'text-body-regular tours__blurb'}>Learning about the mystery of winemaking is one of the unique pleasures of visiting a winery.  At Virginia Mountain Vineyards, we provide tours of our vineyard and winemaking processes to enhance the wine tasting experience and provide a glimpse into the magical journey of bringing science and art together to make great wine.</div>
+            <Link className="tours__button" to="/tours/">learn more +</Link>
+          </div>
+        </div>
+      </section>
+      <section className={'weddings'}>
+        <div className={'weddings__photobook'}></div>
+      </section>
     </main>
   )
 }
