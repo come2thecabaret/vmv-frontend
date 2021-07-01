@@ -1,12 +1,13 @@
-import * as React from "react"
+import React from 'react';
 import { Header } from "../components/Header"
 import "../styles.scss"
 import { FeatureHeader } from "../components/FeatureHeader";
 import { FeatureHero } from "../components/FeatureHero";
 import { HorizontalDivider } from "../components/HorizontalDivider";
-
+import WineList from "../components/WineList"
 
 const Wines = (props) => {
+
   return (
     <main>
       <title>Wines</title>
@@ -32,6 +33,9 @@ const Wines = (props) => {
           <br />Holiday Spice
         </p>
       </div>
+      <section className={'wine-list'}>
+        <WineList></WineList>
+      </section>
 
     </main>
   )
