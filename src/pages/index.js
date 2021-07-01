@@ -64,7 +64,7 @@ const IndexPage = (props) => {
             hoverText="About us"
             variant="primary" />
           <Button
-            label="Contact Us"
+            label="Get in Touch"
             link="/contact-us/"
             hoverText="Contacr us"
             variant="secondary" />          </div>
