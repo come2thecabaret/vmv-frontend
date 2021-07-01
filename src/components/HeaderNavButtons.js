@@ -9,13 +9,13 @@ const HeaderNavButtons = function (props) {
 
   return (
     <div className="vmv-header__nav-buttons">
-      <a href="#">
+      <a href="https://www.facebook.com/VirginiaMountainVineyards/" title="Keep in touch on our VMV Facebook page" target="_blank">
         <FontAwesomeIcon icon={faFacebookSquare} size="2x" color="#0E0A0A" />
       </a>
-      <a href="#">
+      <a href="https://twitter.com/vamtvineyards" title="Follow VMV on Twitter" target="_blank">
         <FontAwesomeIcon icon={faTwitterSquare} size="2x" color="#0E0A0A" />
       </a>
-      <a href="#">
+      <a href="https://www.instagram.com/vamtvineyards/" title="Check out the latest pictures on the VMV Instagram" target="_blank">
         <FontAwesomeIcon icon={faInstagram} size="2x" color="#0E0A0A" />
       </a>
       <Button
