@@ -11,7 +11,7 @@ const Weddings = (props) => {
     <main>
       <title>About Us</title>
       <Header currentPath={props.path}></Header>
-      <FeatureHeader title="About Us"></FeatureHeader>
+      <FeatureHeader title="Weddings"></FeatureHeader>
       <div className="placeholder">
         <p>
           Many dream of having their wedding in a vineyard!  Virginia Mountain Vineyards can make that dream come true.  Our vineyard offers a gorgeous, outdoor chapel setting surrounded by grapevines and lined with our famous red rose bushes.  Our reception venue is a wonderful, large stone patio covered by a tri-peaked white tent.  The impressive panoramic views of the Blue Ridge Mountains from our Event Center and the elegance of the beautiful chandeliers under our tent deliver a dreamy and romantic experience for brides, grooms, and guests.

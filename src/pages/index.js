@@ -51,7 +51,7 @@ const IndexPage = (props) => {
           <div className={'weddings__blurb text-body-regular'}>
             The natural beauty of Virginia Mountain Vineyards is what wedding dreams are made of. From an intimate wedding ceremony nestled in the grapevines to the glittering, vaulted wedding tent overlooking the panoramic view of the Blue Ridge Mountains, weddings at Virginia Mountain Vineyards are truly special and leave lasting memories for brides, grooms and their guests!
           </div>
-          <Link className="weddings__button" to="/tours/">learn more +</Link>
+          <Link className="weddings__button" to="/weddings/">learn more +</Link>
         </div>
       </section>
     </main>
