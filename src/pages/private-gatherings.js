@@ -4,6 +4,7 @@ import "../styles.scss"
 import { FeatureHeader } from "../components/FeatureHeader";
 import { FeatureHero } from "../components/FeatureHero";
 import { HorizontalDivider } from "../components/HorizontalDivider";
+import PrivateGatheringsHero from "../images/private-gatherings.webp";
 
 
 const PrivateGatherings = (props) => {
@@ -12,6 +13,7 @@ const PrivateGatherings = (props) => {
       <title>Tastings at Virginia Mountain Vineyards</title>
       <Header currentPath={props.path}></Header>
       <FeatureHeader title="Private Gatherings"></FeatureHeader>
+      <FeatureHero image={PrivateGatheringsHero}></FeatureHero>
       <div className="placeholder">
         <p>
           Virginia Mountain Vineyards is a wonderful place to host your next party or private gathering.  Helping you realize your dream event is our goal!

@@ -4,6 +4,7 @@ import "../styles.scss"
 import { FeatureHeader } from "../components/FeatureHeader";
 import { FeatureHero } from "../components/FeatureHero";
 import { HorizontalDivider } from "../components/HorizontalDivider";
+import TastingsHero from '../images/tastings-hero.webp'
 
 
 const TastingsPage = (props) => {
@@ -12,7 +13,7 @@ const TastingsPage = (props) => {
       <title>Tastings at Virginia Mountain Vineyards</title>
       <Header currentPath={props.path}></Header>
       <FeatureHeader title="Tastings"></FeatureHeader>
-      <FeatureHero></FeatureHero>
+      <FeatureHero image={TastingsHero}></FeatureHero>
       <h1 className={'dark center spaced'}>Tastings at VMV</h1>
       <div className={'text-subheading'}>Virginia Mountain Vineyards staff work hard to create the best wine tasting experience with great seating, breath-taking views, and expert knowledge of our wines.</div>
       <HorizontalDivider></HorizontalDivider>

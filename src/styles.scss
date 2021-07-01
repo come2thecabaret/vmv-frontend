@@ -500,7 +500,8 @@ hr::after {
     right: 0;
     left: 0;
     height: 115px;
-    background-image: linear-gradient(0deg, rgba(0,0,0,0.00) 0%, rgba(0,0,0,0.65) 68%, rgba(0,0,0,0.80) 100%);
+    // background-image: linear-gradient(0deg, rgba(0,0,0,0.00) 0%, rgba(0,0,0,0.65) 68%, rgba(0,0,0,0.80) 100%);
+    background-image:linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 68%, rgba(0, 0, 0, 0.6) 100%)
 }
 .tastings-header {
     font-size: 80px;
