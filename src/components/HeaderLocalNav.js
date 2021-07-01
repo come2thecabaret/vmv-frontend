@@ -7,28 +7,28 @@ const HeaderLocalNav = function (props) {
   return (
     <div className="vmv-header__local-nav">
       <Link to="/">Home</Link>
-      <Link to="/">About Us</Link>
-      <Link to="/">Wines</Link>
+      <Link to="/about-us/">About Us</Link>
+      <Link to="/wines/">Wines</Link>
       <NavDropdown label="Visit">
         <li>
-          <Link to="/">Tastings</Link>
+          <Link to="/tastings/">Tastings</Link>
         </li>
         <li>
-          <Link to="/">Tours</Link>
+          <Link to="/tours/">Tours</Link>
         </li>
       </NavDropdown>
       <NavDropdown label="Events">
         <li>
-          <Link to="/">Private Gatherings</Link>
+          <Link to="/private-gatherings/">Private Gatherings</Link>
         </li>
         <li>
-          <Link to="/">Upcoming Events</Link>
+          <Link to="/upcoming-events/">Upcoming Events</Link>
         </li>
         <li>
-          <Link to="/">Weddings</Link>
+          <Link to="/weddings/">Weddings</Link>
         </li>
       </NavDropdown>
-      <Link to="/">Contact Us</Link>
+      <Link to="/contact-us/">Contact Us</Link>
     </div>
   )
 }

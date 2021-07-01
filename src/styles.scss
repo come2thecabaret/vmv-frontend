@@ -115,6 +115,7 @@ body, html * {
     font-family: $font-stack;
     margin: 0;
     box-sizing: border-box;
+    max-width: 1920px;
 }
 main {
     height: 100vh;
@@ -600,4 +601,10 @@ hr::after {
     padding: 100px;
     box-sizing: border-box;
 }
-
+.placeholder {
+    font-size: 24px;
+    padding: 100px;
+}
+.placeholder p {
+    margin-bottom: 20px;
+}
