@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 const WineList = (props) => {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
-    const [items, setItems] = useState([]);
+    const [vinoData, setVinoData] = useState([]);
     // Note: the empty deps array [] means
     // this useEffect will run once
     // similar to componentDidMount()
@@ -15,7 +15,7 @@ const WineList = (props) => {
             .then(
                 (result) => {
                     setIsLoaded(true);
-                    setItems(result);
+                    setVinoData(result.data);
                 },
                 // Note: it's important to handle errors here
                 // instead of a catch() block so that we don't swallow
@@ -31,15 +31,18 @@ const WineList = (props) => {
     } else if (!isLoaded) {
         return <div>Loading...</div>;
     } else {
+        console.log(vinoData)
         return (
-            // <ul>
-            //   {items.map(item => (
-            //     <li key={item.id}>
-            //       {item.name} {item.price}
-            //     </li>
-            //   ))}
-            // </ul>
-            <div>{JSON.stringify(items)}</div>
+            <ul className={'wine-card__container'}>
+                {vinoData.wines.map(item => (
+                    <li key={item.id}>
+                        <h3 className={'dark'}>{item.name}</h3>
+                        <img src={item.img} alt="item.name" />
+                        <p>{item.description}</p>
+                        <div>{item.bottleSize.ml} ml / {item.abv}% abv</div>
+                    </li>
+                ))}
+            </ul>
         );
     }
 }

@@ -67,6 +67,9 @@ h2 {
 }
 h3 {
     @include font-heading-3();
+    &.dark {
+        color: black;
+    }
 }
 .text-subheading {
     @include font-subheading();
@@ -708,4 +711,7 @@ hr::after {
 }
 .views__buttons a {
     margin: 0px 10px;
+}
+.wine-card__container li {
+    list-style: none;
 }

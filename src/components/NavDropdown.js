@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'gatsby';
 
 const NavDropdown = function (props) {
-  console.log(props.children)
   const [dropdownIsOpen, setDropdownIsOpen] = useState(false);
   const setDropdownState = () => {
     if (dropdownIsOpen) {
