@@ -362,7 +362,6 @@ hr::after {
     font-style: normal;
     font-size: 26px;
     color: white;
-    padding: 16px 36px;
     text-align: left;
     border-radius: 6px;
     transition: all .3s;
@@ -376,6 +375,7 @@ hr::after {
 }
 .navbar__dropdown-children li a {
     color: white;
+    padding: 16px 36px;
 }
 /* hero */
 .vmv-hero {
