@@ -7,6 +7,7 @@ import Logo from '../images/big-logo.inline.svg'
 import "../styles.scss"
 import QuickLinks from "../components/QuickLinks";
 import Button from "../components/Button";
+import WeddingsCarousel from "../components/WeddingsCarousel";
 
 
 const IndexPage = (props) => {
@@ -44,9 +45,7 @@ const IndexPage = (props) => {
         </div>
       </section>
       <section className={'weddings'}>
-        <div className={'weddings__photobook'}>
-          <div className={'weddings__photobook-frame'}></div>
-        </div>
+        <WeddingsCarousel></WeddingsCarousel>
         <div className={'weddings__text'}>
           <h2 className={'dark spaced-bottom'}>Weddings at VMV</h2>
           <div className={'weddings__blurb text-body-regular'}>
