@@ -1,3 +1,8 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 /* SASS variables */
 $font-stack: freight-display-pro, serif;
 $font-color: white;
@@ -32,6 +37,12 @@ $feature-padding: 36px 56px;
     font-weight: 500;
     color: white;
     font-size: 36px;
+}
+@mixin font-heading-4 {
+    font-family: $font-stack;
+    font-weight: 500;
+    color: black;
+    font-size: 28px;
 }
 @mixin font-subheading {
     font-family: $font-stack;
@@ -725,3 +736,103 @@ hr::after {
     background-color: red;
 }
 // fix carousel shadow
+.wine-card__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-inline-start: 0;
+    padding: 20px 40px 0px;
+    margin-bottom: 40px;
+}
+.wine-card__container > .wine-card {
+    flex: 1 0 48%;
+    flex-basis: calc(48% - 64px);
+}
+.wine-card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 0px 32px 32px;
+    padding: 24px;
+    border-radius: 6px;
+    transition: box-shadow .3s;
+    position: relative;
+}
+.wine-card:hover {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.wine-card__image {
+    // max-height: 500px;
+    // border: 1px solid black;
+    width: 260px;
+    height: auto;
+    align-self: flex-start;
+}
+.wine-card.dominion img {
+    border: 1px solid black;
+}
+.wine-card__title {
+    margin-bottom: 12px;
+}
+.wine-card__body {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 24px;
+}
+.wine-card__description {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.3;
+    max-width: 500px;
+    margin-bottom: 20px;
+}
+.wine-card__fine-print {
+    margin-bottom: 24px;
+    font-size: 16px;
+}
+.wine-card__buy {
+    display: flex;
+}
+.wine-card__quantity {
+    margin-right: 24px;
+    border: 1px solid black;
+    padding: 0.25em 0.5em;
+    font-size: 20px;
+    cursor: pointer;
+    line-height: 1.1;
+    background-color: #fff;
+    display: grid;
+    grid-template-areas: "select";
+    align-items: center;
+    min-width: 65px;
+}
+.wine-card__quantity::after {
+    content: "";
+    width: 0.8em;
+    height: 0.5em;
+    background-color: black;
+    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+    justify-self: end;
+  }
+.wine-card select, .wine-card__quantity::after {
+    grid-area: select;
+}
+.wine-card select {
+    // A reset of styles, including removing the default dropdown arrow
+    appearance: none;
+    // Additional resets for further consistency
+    background-color: transparent;
+    border: none;
+    padding: 0 1em 0 0;
+    margin: 0;
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+    outline: none;
+}
+.wine-card__button {
+
+}

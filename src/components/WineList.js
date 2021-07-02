@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import WineCard from "../components/WineCard"
 import useVinoshipperApi from '../hooks/useVinoshipperApi';
+
 const WineList = (props) => {
     const [wines, setWines] = useState([]);
     const [error, setError] = useState(null);
@@ -34,17 +36,22 @@ const WineList = (props) => {
         )
     } else {
         return (
-            <ul className={'wine-card__container'}>
-                {wines.map(item => (
-                    <li key={item.id}>
-                        <h3 className={'dark'}>{item.name}</h3>
-                        <img src={item.img} alt="item.name" />
-                        <p>{item.description}</p>
-                        <div>{item.bottleSize.ml} ml / {item.abv}% abv</div>
-                    </li>
-                ))}
-                {/* {JSON.stringify(wines)} */}
-            </ul>
+            <>
+                <h2 className={'dark'}>Dominion Series</h2>
+                <ul className={'wine-card__container'}>
+                    {wines.filter(wine => wine.wineMakerNote === "Dominion").map(item => (
+                        <WineCard item={item}></WineCard>
+                    ))}
+                    {/* {JSON.stringify(wines)} */}
+                </ul>
+                <h2 className={'dark'}>Estate Series</h2>
+                <ul className={'wine-card__container'}>
+                    {wines.filter(wine => wine.wineMakerNote === "Estate").map(item => (
+                        <WineCard item={item}></WineCard>
+                    ))}
+                    {/* {JSON.stringify(wines)} */}
+                </ul>
+            </>
         )
     }
 
