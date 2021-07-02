@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import useVinoshipperApi from '../hooks/useVinoshipperApi';
 const WineList = (props) => {
-    const [vinoData, setVinoData] = useState([]);
+    const [wines, setWines] = useState([]);
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     //get vinoshipper data and load into state
@@ -12,13 +12,11 @@ const WineList = (props) => {
             try {
                 const response = await fetch(url);
                 const json = await response.json();
+                setWines(json.data.wines)
                 setIsLoaded(true);
-                setVinoData(json)
-                return json;
             } catch (error) {
                 setIsLoaded(true);
                 setError(error);
-                return error;
             }
         };
         fetchData();
@@ -26,7 +24,29 @@ const WineList = (props) => {
         // this useEffect will run once
         // similar to componentDidMount()
     }, []);
-
+    if (error) {
+        return (
+            <div>We had an error loading our wine selection. Please try refreshing the page. Thank you!</div>
+        )
+    } else if (!isLoaded) {
+        return (
+            <div>Loading...</div>
+        )
+    } else {
+        return (
+            <ul className={'wine-card__container'}>
+                {wines.map(item => (
+                    <li key={item.id}>
+                        <h3 className={'dark'}>{item.name}</h3>
+                        <img src={item.img} alt="item.name" />
+                        <p>{item.description}</p>
+                        <div>{item.bottleSize.ml} ml / {item.abv}% abv</div>
+                    </li>
+                ))}
+                {/* {JSON.stringify(wines)} */}
+            </ul>
+        )
+    }
 
     return (
         <div>placeholder</div>
