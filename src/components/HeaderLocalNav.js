@@ -11,7 +11,7 @@ const HeaderLocalNav = function (props) {
       <Link to="/wines/">Wines</Link>
       <NavDropdown label="Visit">
         <li>
-          <Link to="/tastings/">Tastings</Link>
+          <Link to="/tastings/">The Wine Experience</Link>
         </li>
         <li>
           <Link to="/tours/">Tours</Link>

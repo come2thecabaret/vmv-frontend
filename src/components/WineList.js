@@ -38,6 +38,7 @@ const WineList = (props) => {
         return (
             <>
                 <h2 className={'dark'}>Dominion Series</h2>
+                <p>Fun, unique, and creative blends. The Dominion Series highlights the variety and quality of our grapes.</p>
                 <ul className={'wine-card__container'}>
                     {wines.filter(wine => wine.wineMakerNote === "Dominion").map(item => (
                         <WineCard item={item}></WineCard>
@@ -45,6 +46,7 @@ const WineList = (props) => {
                     {/* {JSON.stringify(wines)} */}
                 </ul>
                 <h2 className={'dark'}>Estate Series</h2>
+                <p>The elegance of our Estate Series wines represent the pinnacle of </p>
                 <ul className={'wine-card__container'}>
                     {wines.filter(wine => wine.wineMakerNote === "Estate").map(item => (
                         <WineCard item={item}></WineCard>
