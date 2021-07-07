@@ -46,7 +46,7 @@ const WineList = (props) => {
                     {/* {JSON.stringify(wines)} */}
                 </ul>
                 <h2 className={'dark'}>Estate Series</h2>
-                <p>The elegance of our Estate Series wines represent the pinnacle of </p>
+                <p>The Estate Series represents the best of Virginia Mountain Vineyards.</p>
                 <ul className={'wine-card__container'}>
                     {wines.filter(wine => wine.wineMakerNote === "Estate").map(item => (
                         <WineCard item={item}></WineCard>

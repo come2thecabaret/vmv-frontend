@@ -26,7 +26,7 @@ const ContactUs = (props) => {
           <li>send us a message on Facebook</li>
           <li>Call us at (540) 473-2979</li>
         </ul>
-        <p>FORM</p>
+        <div><strong>FORM</strong></div>
       </div>
 
     </main>

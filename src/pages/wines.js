@@ -14,6 +14,8 @@ const Wines = (props) => {
       <Header currentPath={props.path}></Header>
       <FeatureHeader title="Wines"></FeatureHeader>
       <div className="placeholder">
+        <p><strong>curate hero image</strong></p>
+
         <p>
           The winemaking philosophy at Virginia Mountain Vineyards is to allow
           the quality of the grapes grown in our vineyard to shine in every wine.

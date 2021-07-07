@@ -23,6 +23,7 @@ const AboutUs = (props) => {
           County is a great tourist destination for hiking, camping, river rafting,
           other outdoor sports, and fans of great American history.
         </p>
+        <p><strong>Either insert old map, or old map faded behind text?</strong></p>
         {/* https://www.loc.gov/resource/gvhs01.vhs00342/?r=-0.924,-0.369,2.847,1.779,0 */}
         <p>
           Virginia Mountain Vineyards, a winery and vineyard, is part of the
@@ -48,6 +49,8 @@ const AboutUs = (props) => {
           practices as they strive to make Virginia Mountain Vineyards known for producing
           some of the best and most unique wines.
         </p>
+        <p><strong>Great picture of road sign to end?</strong></p>
+
       </div>
 
     </main>

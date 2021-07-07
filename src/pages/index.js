@@ -21,9 +21,9 @@ const IndexPage = (props) => {
       <section className="tastings">
         <StaticImage className="tastings-img" layout="fullWidth" src="../images/tastings.png" alt="tastings pic" />
         <div className="tastings__text">
-          <h2 className="spaced-bottom">Tastings</h2>
+          <h2 className="spaced-bottom">The Wine Experience</h2>
           <div className="text-body-regular light">
-            <p>Wine Tasting at Virginia Mountain Vineyards brings together the best that
+            <p>Experiencing wine at Virginia Mountain Vineyards brings together the best that
               Virginia has to offer  -  panoramic views of the Blue Ridge Mountains and
               an exceptional wine tasting experience.</p>
             <p>Knowledgeable staff welcome you as a special guest and guide you through
@@ -39,7 +39,12 @@ const IndexPage = (props) => {
         <div className={'tours__text'}>
           <h2 className={'dark spaced-right tours__header'}>Tours</h2>
           <div className={'tours__text-body'}>
-            <div className={'text-body-regular tours__blurb'}>Learning about the mystery of winemaking is one of the unique pleasures of visiting a winery.  At Virginia Mountain Vineyards, we provide tours of our vineyard and winemaking processes to enhance the wine tasting experience and provide a glimpse into the magical journey of bringing science and art together to make great wine.</div>
+            <div className={'text-body-regular tours__blurb'}>
+              Learning about the mystery of winemaking is one of the unique pleasures of visiting a
+              winery.  At Virginia Mountain Vineyards, we provide tours of our vineyard and
+              winemaking processes to enhance the wine tasting experience. The tours provide a glimpse
+              into the magical journey of bringing science and art together to make great wine.
+            </div>
             <Link className="tours__button" to="/tours/">learn more +</Link>
           </div>
         </div>
@@ -47,9 +52,12 @@ const IndexPage = (props) => {
       <section className={'weddings'}>
         <WeddingsCarousel></WeddingsCarousel>
         <div className={'weddings__text'}>
-          <h2 className={'dark spaced-bottom'}>Weddings at VMV</h2>
+          <h2 className={'dark spaced-bottom'}>Weddings in the Vines</h2>
           <div className={'weddings__blurb text-body-regular'}>
-            The natural beauty of Virginia Mountain Vineyards is what wedding dreams are made of. From an intimate wedding ceremony nestled in the grapevines to the glittering, vaulted wedding tent overlooking the panoramic view of the Blue Ridge Mountains, weddings at Virginia Mountain Vineyards are truly special and leave lasting memories for brides, grooms and their guests!
+            The natural beauty of Virginia Mountain Vineyards is what wedding dreams are made of.
+            From an intimate wedding ceremony nestled in the grapevines to the glittering, vaulted
+            wedding tent overlooking the panoramic view of the Blue Ridge Mountains, weddings at Virginia
+            Mountain Vineyards are truly special and leave lasting memories for brides, grooms, and their guests!
           </div>
           <Link className="weddings__button" to="/weddings/">learn more +</Link>
         </div>

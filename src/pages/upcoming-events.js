@@ -14,7 +14,10 @@ const UpcomingEvents = (props) => {
       <FeatureHeader title="Upcoming Events"></FeatureHeader>
       <div className="placeholder">
         <p>
-          need intro text to go above calendar
+          We continue to add new and exciting events to our calendar, from relaxing
+          acoustic concerts to our popular yoga events. We are passionate about providing
+          a beautiful setting to showcase local talent. Make sure to keep checking our Upcoming Events
+          for some of the best local entertainment in Botetourt County.
         </p>
       </div>
 
