@@ -4,17 +4,23 @@ import HeaderLocalNav from './HeaderLocalNav'
 import HeaderNavButtons from './HeaderNavButtons';
 import Monogram from '../images/monogram.inline.svg'
 import { useStaticQuery, graphql } from "gatsby"
+import { useSiteMetadata } from "../hooks/useSiteMetadata"
 
 
-export const Header = (props) => {
-  const [pageScroll, setPageScroll] = useState("topish")
+const Header = (props) => {
+  const { title } = useSiteMetadata()
+  const [scrollClass, setScrollClass] = useState("")
   const listenScrollEvent = (event) => {
-    if (window.scrollY < 100 && props.currentPath === "/") {
-      return setPageScroll("topish")
-    } else if (window.scrollY > 100 && props.currentPath === "/") {
-      return setPageScroll("below")
-    } else {
-      return setPageScroll("below")
+    // console.log(props.currentPath)
+    //fix - the prop isn't update cuz component doesnt rerender
+    if (window.scrollY < 100 && props.type === "homepage") {
+      return setScrollClass("sticky-transparent")
+    } else if (window.scrollY >= 100 && props.type === "homepage") {
+      return setScrollClass("sticky-solid")
+    } else if (window.scrollY < 100 && props.type === "regular") {
+      return setScrollClass("inlayout-big")
+    } else if (window.scrollY >= 100 && props.type === "regular") {
+      return setScrollClass("inlayout-small")
     }
   }
 
@@ -57,7 +63,7 @@ export const Header = (props) => {
   const navItemsData = data.allSanityHeader.edges[0].node.internalLinks;
 
   return (
-    <div className={`vmv-header ${pageScroll}`}>
+    <div className={`vmv-header ${scrollClass}`}>
       <StaticImage
         src="../images/Monogram.webp"
         alt="Monogram"
@@ -69,6 +75,7 @@ export const Header = (props) => {
       ></StaticImage>
       <HeaderLocalNav items={navItemsData}></HeaderLocalNav>
       <HeaderNavButtons></HeaderNavButtons>
-    </div>
+    </div >
   )
 }
+export default Header

@@ -1,16 +1,16 @@
 import * as React from "react"
-import { Header } from "../components/Header"
-import "../styles.scss"
-import { FeatureHeader } from "../components/FeatureHeader";
-import { FeatureHero } from "../components/FeatureHero";
-import { HorizontalDivider } from "../components/HorizontalDivider";
+import Header from "../components/Header"
+import FeatureHeader from "../components/FeatureHeader";
+import FeatureHero from "../components/FeatureHero";
+import HorizontalDivider from "../components/HorizontalDivider";
+import Layout from "../components/layout"
 
 
 const AboutUs = (props) => {
   return (
-    <main>
+    <>
       <title>About Us</title>
-      <Header currentPath={props.path}></Header>
+      {/* <Layout location={props.path} headerType="regular"> */}
       <FeatureHeader title="About Us"></FeatureHeader>
       <div className="placeholder">
         <p>
@@ -52,8 +52,8 @@ const AboutUs = (props) => {
         <p><strong>Great picture of road sign to end?</strong></p>
 
       </div>
-
-    </main>
+      {/* </Layout> */}
+    </>
   )
 }
 

@@ -1,0 +1,47 @@
+/* ==========================================================================
+   #TYPOGRAPHY-VARIABLES
+   ========================================================================== */
+
+$serif: freight-display-pro, serif;
+$base-size: 16px;
+
+$typographic-styles: (
+   'heading': ( 
+   'banner-heading': (
+     'font-size': 20px,
+     'line-height': 1.6,
+     'font-weight': bold,
+     'color': #ffffff,
+   ),
+   'card-heading': (
+     'font-size': 15px,
+     'line-height': 1.3,
+     'font-weight': bold,
+     'color': #5c696d,
+   ),
+   'paragraph-text': (
+     'font-size': 15px,
+     'line-height': 1.4,
+     'color': #252525,
+   ),
+ ),
+  'body': ( 
+    'banner-heading': (
+      'font-size': 20px,
+      'line-height': 1.6,
+      'font-weight': bold,
+      'color': #ffffff,
+    ),
+    'card-heading': (
+      'font-size': 15px,
+      'line-height': 1.3,
+      'font-weight': bold,
+      'color': #5c696d,
+    ),
+    'paragraph-text': (
+      'font-size': 15px,
+      'line-height': 1.4,
+      'color': #252525,
+    ),
+  )
+);

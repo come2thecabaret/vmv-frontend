@@ -9,6 +9,12 @@ module.exports = {
     },
     "gatsby-plugin-sass",
     "gatsby-plugin-image",
+    {
+      resolve: `gatsby-plugin-layout`,
+      // options: {
+      //   component: require.resolve(`./src/components/layout.js`),
+      // }
+    },
     "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-plugin-manifest",

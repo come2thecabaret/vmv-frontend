@@ -1,17 +1,17 @@
 import * as React from "react"
 import { Header } from "../components/Header"
-import "../styles.scss"
-import { FeatureHeader } from "../components/FeatureHeader";
-import { FeatureHero } from "../components/FeatureHero";
-import { HorizontalDivider } from "../components/HorizontalDivider";
+import FeatureHeader from "../components/FeatureHeader";
+import FeatureHero from "../components/FeatureHero";
+import HorizontalDivider from "../components/HorizontalDivider";
 import TastingsHero from '../images/tastings-hero.webp'
+import Layout from "../components/layout"
 
 
 const TastingsPage = (props) => {
   return (
-    <main>
+    <>
       <title>Tastings at Virginia Mountain Vineyards</title>
-      <Header currentPath={props.path}></Header>
+      {/* <Layout location={props.path} headerType="regular"> */}
       <FeatureHeader title="The Wine Experience"></FeatureHeader>
       <FeatureHero image={TastingsHero}></FeatureHero>
       {/* <h1 className={'dark center spaced'}>The Wine Experience</h1> */}
@@ -42,7 +42,8 @@ const TastingsPage = (props) => {
         warm enough to sit outside, we will re-open the Tasting Room for outdoor seating.</p> */}
       <HorizontalDivider></HorizontalDivider>
 
-    </main>
+      {/* </Layout> */}
+    </>
   )
 }
 

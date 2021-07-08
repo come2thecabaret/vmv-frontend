@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-export const HorizontalDivider = (props) => {
+const HorizontalDivider = (props) => {
   return (
     <div className={"vmv-hr"}>
       <hr></hr>
@@ -9,4 +9,6 @@ export const HorizontalDivider = (props) => {
     </div>
   )
 }
+
+export default HorizontalDivider
 

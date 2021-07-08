@@ -1,8 +1,17 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+// 00. Settings
+@use '00-settings/colors';
+@use '00-settings/typography';
+
+// 01. Tools
+@use '01-tools/typeMixins';
+
+// 04. Elements
+@use '04-elements/all';
+@use '04-elements/heading1';
+@use '04-elements/heading2';
+@use '04-elements/body1';
+
+
 /* SASS variables */
 $font-stack: freight-display-pro, serif;
 $font-color: white;
@@ -14,20 +23,20 @@ $feature-padding: 36px 56px;
 
 @mixin feature-body-font {
     font-size: 24px;
-    color: #fff;
+    color: colors.$color-white;
     font-weight: medium;
 }
 @mixin font-heading-1 {
-    font-family: $font-stack;
+    font-family: typography.$serif;
     font-weight: 500;
-    font-size: 80px;
-    color: white;
+    // font-size: 80px;
+    color: colors.$color-white;
 }
 @mixin font-heading-2 {
     font-family: $font-stack;
     font-weight: 400;
-    font-size: 56px;
-    color: white;
+    // font-size: 56px;
+    color: colors.$color-white;
     font-style: italic;
     text-align: center;
     letter-spacing: 3px;
@@ -35,7 +44,7 @@ $feature-padding: 36px 56px;
 @mixin font-heading-3 {
     font-family: $font-stack;
     font-weight: 500;
-    color: white;
+    color: colors.$color-white;
     font-size: 36px;
 }
 @mixin font-heading-4 {
@@ -49,10 +58,13 @@ $feature-padding: 36px 56px;
     font-weight: 700;
     font-size: 36px;
 }
+p {
+    max-width: 800px;
+}
 h1 {
     @include font-heading-1();
     &.dark {
-        color: black;
+        color: colors.$color-black;
     }
     &.shadow {
         text-shadow: 0 2px 4px rgba(0,0,0,0.40);
@@ -67,7 +79,7 @@ h1 {
 h2 {
     @include font-heading-2();
     &.dark {
-        color: black;
+        color: colors.$color-black;
     }
     &.spaced-right {
         margin-right: 80px;
@@ -79,7 +91,7 @@ h2 {
 h3 {
     @include font-heading-3();
     &.dark {
-        color: black;
+        color: colors.$color-black;
     }
 }
 .text-subheading {
@@ -94,11 +106,11 @@ h3 {
     font-family: freight-display-pro, serif;
     font-weight: 400;
     letter-spacing: 0.3px;
-    color: black;
+    color: colors.$color-black;
     font-size: 24px;
     line-height: 1.4;
     &.light {
-        color: white;
+        color: colors.$color-white;
     }
     p {
         margin-bottom: 22px;
@@ -111,10 +123,10 @@ h3 {
     font-family: $font-stack;
     font-weight: 400;
     letter-spacing: 1.19;
-    color: black;
+    color: colors.$color-black;
     font-size: 36px;
     &.light {
-        color: white;
+        color: colors.$color-white;
     }
     max-width: 1300px;
     margin: 0 auto;
@@ -134,7 +146,7 @@ body, html * {
     box-sizing: border-box;
 }
 body {
-    max-width: 1920px;
+    // max-width: 1920px;
 }
 main {
     height: 100vh;
@@ -161,7 +173,7 @@ hr::after {
     height: 4px;
     width: 40px;
     left: calc(50% - 15px);
-    background-color: white;
+    background-color: colors.$color-white;
     position: absolute;
     top: -2px;
 }
@@ -190,26 +202,41 @@ hr::after {
     font-style: normal;
     font-size: 26px;
     color: #fff;
-    background: #000;
+    background: colors.$color-black;
     padding: 6px 45px;
     text-align: center;    
     position: relative;
     display: inline-block;
-    border: 1px solid black;
+    border: 1px solid colors.$color-black;
     text-decoration: none;
+    border-radius: 2px;
+    transition: all .3s;
 }
 .vmv-button--secondary {
     font-weight: 400;
     font-style: normal;
     font-size: 26px;
-    color: black;
-    background: white;
+    color: colors.$color-black;
+    background: colors.$color-white;
     padding: 6px 45px;
     text-align: center;  
     position: relative;
     display: inline-block;  
-    border: 1px solid black;
+    border: 1px solid #AF786A;
     text-decoration: none;
+    border-radius: 2px;
+    transition: all .3s;
+}
+.vmv-button--primary:hover, .vmv-button--secondary:hover {
+    border-radius: 6px;
+}
+.vmv-button--primary:hover {
+    // color: #caa59c;
+    border-color: #AF786A;
+
+}
+.vmv-button--secondary:hover {
+    background: rgba(0, 0, 0, .13);
 }
 /* Site header */
 .vmv-header {
@@ -227,9 +254,24 @@ hr::after {
     transition: background-color .2s, padding .3s;
     text-decoration: none;
 }
-.vmv-header.below {
-    background-color: white;
+
+.vmv-header.sticky-transparent {
+    background: transparent;
+}
+.vmv-header.sticky-solid {
+    background-color: colors.$color-white;
+    border-bottom: 5px solid #AF786A; 
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+.vmv-header.inlayout-big {
+    border-bottom: 5px solid #AF786A; 
+    background-color: colors.$color-white;
+
+}
+.vmv-header.inlayout-small {
     border-bottom: 5px solid #AF786A;
+    background-color: colors.$color-white;
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -239,16 +281,23 @@ hr::after {
     cursor: pointer;
     border-radius: 500px;
     transition: background-color .3s;
+    flex-shrink: 0;
+    margin: 0px 22px 0px 0px;
 }
 .vmv-header__monogram:hover {
     background-color: rgba(0, 0, 0, .18);
 }
 /* Local site navigation */
+.vmv-header__local-nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 .vmv-header__local-nav > a {
     font-weight: 500;
     font-style: normal;
     font-size: 26px;
-    color: #000;
+    color: colors.$color-black;
     padding: 16px 36px;
     text-align: center;
     border-radius: 6px;
@@ -308,7 +357,7 @@ hr::after {
     font-weight: 500;
     font-style: normal;
     font-size: 26px;
-    color: #000;
+    color: colors.$color-black;
     padding: 16px 56px 16px 36px;
     text-align: center;
     border-radius: 6px;
@@ -325,7 +374,7 @@ hr::after {
     height: 0;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-top: 10px solid black;
+    border-top: 10px solid colors.$color-black;
     position: absolute;
     right: 32px;
     top: calc(50% - 6px);
@@ -345,7 +394,7 @@ hr::after {
     height: 0;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-top: 10px solid black;
+    border-top: 10px solid colors.$color-black;
     position: absolute;
     right: 32px;
     top: calc(50% - 5px); 
@@ -357,7 +406,7 @@ hr::after {
     opacity: 0;}
 .navbar__dropdown-children {
     transition: visibility .2s, opacity .2s;
-    background: black;
+    background: colors.$color-black;
     padding: 8px;
     position: absolute;
     top: calc(100% + 10px);
@@ -424,12 +473,12 @@ hr::after {
     top: 0;
     left: 0;
     bottom: 0;
-    max-width: 500px;
+    max-width: 33vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: $feature-padding;
-    background-image: linear-gradient(180deg, rgba(0,0,0,0.00) 0%, #000000 100%);
+    background-image: linear-gradient(180deg, rgba(0,0,0,0.00) 0%, colors.$color-black 100%);
     box-sizing: border-box;
     backdrop-filter: blur(10px);
 }
@@ -452,7 +501,7 @@ hr::after {
     text-decoration: none;
     padding: 16px 36px;
     border-radius: 6px;
-    border: 1px solid white;
+    border: 1px solid colors.$color-white;
     display: inline-block;
     align-self: center;
     border: 1px solid transparent;
@@ -474,7 +523,7 @@ hr::after {
 .feature-header__logo {
     width: 300px;
     height: 160px;
-    background-color: black;
+    background-color: colors.$color-black;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -486,19 +535,19 @@ hr::after {
     left: 100%;
     bottom: 0;
     content: '';
-    border-top: 160px solid black;
+    border-top: 160px solid colors.$color-black;
     border-right: 80px solid transparent;
 }
 .feature-header__logo svg {
     height: 105px;
 }
 .feature-header__logo path {
-    fill: white;
+    fill: colors.$color-white;
 }
 .feature-header__title {
     font-size: 80px;
     text-shadow: 0 2px 4px rgba(0,0,0,0.40);
-    color: #fff;
+    color: colors.$color-white;
 
 }
 .feature-hero {
@@ -542,7 +591,7 @@ hr::after {
 }
 .quick-links {
     width: 100vw;
-    background-image: url(./images/quick-links-pattern.png);
+    background-image: url(../images/quick-links-pattern.png);
     background-size: cover;
     background-position: right center;
     background-repeat: no-repeat;
@@ -613,11 +662,11 @@ hr::after {
 .tours__button {
     font-size: 24px;
     font-style: italic;
-    color: black;
+    color: colors.$color-black;
     text-decoration: none;
     padding: 16px 36px;
     border-radius: 6px;
-    border: 1px solid white;
+    border: 1px solid  colors.$color-white;
     display: inline-block;
     align-self: center;
     border: 1px solid transparent;
@@ -638,7 +687,7 @@ hr::after {
 .weddings__photobook {
     width: 900px;
     height: 800px;
-    background-image: url(./images/sparkle-frame.webp);
+    background-image: url(../images/sparkle-frame.webp);
     background-size: cover;
     background-position: right center;
     background-repeat: no-repeat;
@@ -649,19 +698,21 @@ hr::after {
     border-radius: 2px;
 }
 .weddings__text {
-    flex: 1;
-    padding: $feature-padding;
+    flex: 1 1;
+    padding: 36px 56px;
     display: flex;
     flex-direction: column;
+    max-width: 1200px;
+    align-items: center;
 }
 .weddings__button {
     font-size: 24px;
     font-style: italic;
-    color: black;
+    color: colors.$color-black;
     text-decoration: none;
     padding: 16px 36px;
     border-radius: 6px;
-    border: 1px solid white;
+    border: 1px solid colors.$color-white;
     display: inline-block;
     align-self: center;
     border: 1px solid transparent;
@@ -693,7 +744,7 @@ hr::after {
 .views {
     height: 600px;
     width: 100%;
-    background-image: url('./images/views.webp');    
+    background-image: url('../images/down-the-vines.jpg');    
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
@@ -771,7 +822,7 @@ hr::after {
     align-self: flex-start;
 }
 .wine-card.dominion img {
-    border: 1px solid black;
+    border: 1px solid colors.$color-black;
 }
 .wine-card__title {
     margin-bottom: 12px;
@@ -797,12 +848,12 @@ hr::after {
 }
 .wine-card__quantity {
     margin-right: 24px;
-    border: 1px solid black;
+    border: 1px solid colors.$color-black;
     padding: 0.25em 0.5em;
     font-size: 20px;
     cursor: pointer;
     line-height: 1.1;
-    background-color: #fff;
+    background-color: colors.$color-white;
     display: grid;
     grid-template-areas: "select";
     align-items: center;
@@ -812,7 +863,7 @@ hr::after {
     content: "";
     width: 0.8em;
     height: 0.5em;
-    background-color: black;
+    background-color: colors.$color-black;
     clip-path: polygon(100% 0%, 0 0%, 50% 100%);
     justify-self: end;
   }
@@ -837,3 +888,5 @@ hr::after {
 .wine-card__button {
 
 }
+
+

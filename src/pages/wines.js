@@ -1,17 +1,18 @@
 import React from 'react';
 import { Header } from "../components/Header"
-import "../styles.scss"
-import { FeatureHeader } from "../components/FeatureHeader";
-import { FeatureHero } from "../components/FeatureHero";
-import { HorizontalDivider } from "../components/HorizontalDivider";
+import FeatureHeader from "../components/FeatureHeader";
+import FeatureHero from "../components/FeatureHero";
+import HorizontalDivider from "../components/HorizontalDivider";
 import WineList from "../components/WineList"
+import Layout from "../components/layout"
+
 
 const Wines = (props) => {
 
   return (
-    <main>
-      <title>Wines</title>
-      <Header currentPath={props.path}></Header>
+    <>
+      <title>Home Page</title>
+      {/* <Layout location={props.path} headerType="regular"> */}
       <FeatureHeader title="Wines"></FeatureHeader>
       <div className="placeholder">
         <p><strong>curate hero image</strong></p>
@@ -35,7 +36,8 @@ const Wines = (props) => {
         <WineList></WineList>
       </section>
 
-    </main>
+      {/* </Layout> */}
+    </>
   )
 }
 

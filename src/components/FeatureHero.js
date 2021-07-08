@@ -1,9 +1,10 @@
-import React, { } from 'react';
+import React from 'react';
 
-export const FeatureHero = (props) => {
+const FeatureHero = (props) => {
   return (
     <div className={`feature-hero`} style={{ backgroundImage: `url(${props.image})` }}>
     </div>
   )
 }
+export default FeatureHero
 

@@ -1,0 +1,5 @@
+@use '../01-tools/typeMixins';
+
+h1 {  
+  font-size: typeMixins.least-squares-fit((400px: 36px, 1200px: 60px, 1400px: 70px, 2400px: 80px));
+}

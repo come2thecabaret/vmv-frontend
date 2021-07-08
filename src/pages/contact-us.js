@@ -1,17 +1,17 @@
 import * as React from "react"
-import { Header } from "../components/Header"
-import "../styles.scss"
-import { FeatureHeader } from "../components/FeatureHeader";
-import { FeatureHero } from "../components/FeatureHero";
-import { HorizontalDivider } from "../components/HorizontalDivider";
+import Header from "../components/Header"
+import FeatureHeader from "../components/FeatureHeader";
+import FeatureHero from "../components/FeatureHero";
+import HorizontalDivider from "../components/HorizontalDivider";
 import ContactUsHero from "../images/vmv-road-sign.webp";
+import Layout from "../components/layout"
 
 
 const ContactUs = (props) => {
   return (
-    <main>
+    <>
       <title>Contact Us</title>
-      <Header currentPath={props.path}></Header>
+      {/* <Layout location={props.path} headerType="regular"> */}
       <FeatureHeader title="Contact Us"></FeatureHeader>
       <FeatureHero image={ContactUsHero}></FeatureHero>
       <div className="placeholder">
@@ -29,7 +29,8 @@ const ContactUs = (props) => {
         <div><strong>FORM</strong></div>
       </div>
 
-    </main>
+      {/* </Layout> */}
+    </>
   )
 }
 
