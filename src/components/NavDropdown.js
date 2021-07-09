@@ -13,7 +13,7 @@ const NavDropdown = function (props) {
   return (
     <>
       <div className="navbar__dropdown">
-        <div className={`navbar__dropdown-label ${dropdownIsOpen}`} onClick={() => setDropdownState()}>{props.label}</div>
+        <div className={`navbar__dropdown-label link ${dropdownIsOpen}`} onClick={() => setDropdownState()}>{props.label}</div>
         <ul className={"navbar__dropdown-children"}>
           {props.children}
         </ul>

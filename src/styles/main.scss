@@ -10,6 +10,7 @@
 @use '04-elements/heading1';
 @use '04-elements/heading2';
 @use '04-elements/body1';
+@use '04-elements/hyperlink';
 
 
 /* SASS variables */
@@ -56,7 +57,7 @@ $feature-padding: 36px 56px;
 @mixin font-subheading {
     font-family: $font-stack;
     font-weight: 700;
-    font-size: 36px;
+    font-size: 26px;
 }
 p {
     max-width: 800px;
@@ -99,8 +100,8 @@ h3 {
     line-height: 1.25;
     text-align: center;
     margin: 0 auto;
-    margin-top: 42px;
     max-width: 900px;
+    padding: 24px 36px;
 }
 .text-body-regular {
     font-family: freight-display-pro, serif;
@@ -233,6 +234,7 @@ hr::after {
 .vmv-button--primary:hover {
     // color: #caa59c;
     border-color: #AF786A;
+    background: rgba(0, 0, 0, .8);
 
 }
 .vmv-button--secondary:hover {
@@ -296,7 +298,7 @@ hr::after {
 .vmv-header__local-nav > a {
     font-weight: 500;
     font-style: normal;
-    font-size: 26px;
+    // font-size: 26px;
     color: colors.$color-black;
     padding: 16px 36px;
     text-align: center;
@@ -338,6 +340,8 @@ hr::after {
     cursor: pointer;
     transition: all .3s;
     margin-left: 4px;
+    font-size: 18px;
+
 }
 .vmv-header__nav-buttons > a:not(.vmv-button--primary):hover {
     background-color: rgba(0, 0, 0, .18);
@@ -356,7 +360,7 @@ hr::after {
 .navbar__dropdown-label {
     font-weight: 500;
     font-style: normal;
-    font-size: 26px;
+    // font-size: 26px;
     color: colors.$color-black;
     padding: 16px 56px 16px 36px;
     text-align: center;
@@ -513,7 +517,7 @@ hr::after {
     background-color: rgba(255,255,255, .18);
 }
 .feature-header {
-    margin-top: 85px;
+    margin-top:100px;
     background-repeat: no-repeat;
     background-position: right center;
     background-size: cover;
@@ -683,6 +687,7 @@ hr::after {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    justify-content: center;
 }
 .weddings__photobook {
     width: 900px;

@@ -1,6 +1,6 @@
 @use '../01-tools/typeMixins';
 
 h2 {  
-  font-size: typeMixins.least-squares-fit((400px: 48px, 1200px: 56px, 1400px: 72px, 2400px: 82px));
+  font-size: typeMixins.least-squares-fit((400px: 48px, 1200px: 56px, 1400px: 72px, 2400px: 74px));
   // font-size: clamp(2.25rem, 4vw, 5rem);
 }
