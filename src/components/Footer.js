@@ -2,7 +2,7 @@ import * as React from "react"
 
 const Footer = (props) => {
   return (
-    <div>Footer</div>
+    <div className={'c-footer'}>Footer</div>
   )
 }
 

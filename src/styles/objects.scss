@@ -1,0 +1,17 @@
+.o-flexGrid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-inline-start: 0;
+    padding: 20px 40px 0px;
+    margin-bottom: 40px;
+}
+.o-flexObject--50 {
+    flex: 1 0 48%;
+    flex-basis: calc(48% - 64px);
+}
+.o-flexObject--33 {
+    flex: 1 0 32%;
+    flex-basis: calc(32% - 64px);
+}

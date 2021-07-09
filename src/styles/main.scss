@@ -1,17 +1,12 @@
-// 00. Settings
-@use '00-settings/colors';
-@use '00-settings/typography';
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'generic.scss';
+@import 'objects.scss';
+@import 'components.scss';
+@import 'utilities.scss';
 
-// 01. Tools
-@use '01-tools/typeMixins';
-
-// 04. Elements
-@use '04-elements/all';
-@use '04-elements/heading1';
-@use '04-elements/heading2';
-@use '04-elements/body1';
-@use '04-elements/hyperlink';
-
+// 06. Components
+@import '06-components/wineCard';
 
 /* SASS variables */
 $font-stack: freight-display-pro, serif;
@@ -24,28 +19,28 @@ $feature-padding: 36px 56px;
 
 @mixin feature-body-font {
     font-size: 24px;
-    color: colors.$color-white;
+    color: $color-white;
     font-weight: medium;
 }
 @mixin font-heading-1 {
-    font-family: typography.$serif;
+    font-family: $font-stack;
     font-weight: 500;
     // font-size: 80px;
-    color: colors.$color-white;
+    color: $color-white;
 }
 @mixin font-heading-2 {
     font-family: $font-stack;
     font-weight: 400;
     // font-size: 56px;
-    color: colors.$color-white;
-    font-style: italic;
-    text-align: center;
-    letter-spacing: 3px;
+    color: $color-white;
+    // font-style: italic;
+    // text-align: center;
+    // letter-spacing: 3px;
 }
 @mixin font-heading-3 {
     font-family: $font-stack;
     font-weight: 500;
-    color: colors.$color-white;
+    color: $color-white;
     font-size: 36px;
 }
 @mixin font-heading-4 {
@@ -65,7 +60,7 @@ p {
 h1 {
     @include font-heading-1();
     &.dark {
-        color: colors.$color-black;
+        color: $color-black;
     }
     &.shadow {
         text-shadow: 0 2px 4px rgba(0,0,0,0.40);
@@ -80,7 +75,7 @@ h1 {
 h2 {
     @include font-heading-2();
     &.dark {
-        color: colors.$color-black;
+        color: $color-black;
     }
     &.spaced-right {
         margin-right: 80px;
@@ -92,7 +87,7 @@ h2 {
 h3 {
     @include font-heading-3();
     &.dark {
-        color: colors.$color-black;
+        color: $color-black;
     }
 }
 .text-subheading {
@@ -107,11 +102,10 @@ h3 {
     font-family: freight-display-pro, serif;
     font-weight: 400;
     letter-spacing: 0.3px;
-    color: colors.$color-black;
-    font-size: 24px;
+    color: $color-black;
     line-height: 1.4;
     &.light {
-        color: colors.$color-white;
+        color: $color-white;
     }
     p {
         margin-bottom: 22px;
@@ -124,10 +118,10 @@ h3 {
     font-family: $font-stack;
     font-weight: 400;
     letter-spacing: 1.19;
-    color: colors.$color-black;
+    color: $color-black;
     font-size: 36px;
     &.light {
-        color: colors.$color-white;
+        color: $color-white;
     }
     max-width: 1300px;
     margin: 0 auto;
@@ -150,7 +144,7 @@ body {
     // max-width: 1920px;
 }
 main {
-    height: 100vh;
+    // height: 100vh;
     // display: flex;
     // flex-direction: column;
     // flex: 1;
@@ -174,7 +168,7 @@ hr::after {
     height: 4px;
     width: 40px;
     left: calc(50% - 15px);
-    background-color: colors.$color-white;
+    background-color: $color-white;
     position: absolute;
     top: -2px;
 }
@@ -203,38 +197,38 @@ hr::after {
     font-style: normal;
     font-size: 26px;
     color: #fff;
-    background: colors.$color-black;
+    background: $color-black;
     padding: 6px 45px;
     text-align: center;    
     position: relative;
     display: inline-block;
-    border: 1px solid colors.$color-black;
+    border: 1px solid $color-black;
     text-decoration: none;
-    border-radius: 2px;
+    border-radius: 6px;
     transition: all .3s;
 }
 .vmv-button--secondary {
     font-weight: 400;
     font-style: normal;
     font-size: 26px;
-    color: colors.$color-black;
-    background: colors.$color-white;
+    color: $color-black;
+    background: $color-white;
     padding: 6px 45px;
     text-align: center;  
     position: relative;
     display: inline-block;  
     border: 1px solid #AF786A;
     text-decoration: none;
-    border-radius: 2px;
+    border-radius: 6px;
     transition: all .3s;
 }
 .vmv-button--primary:hover, .vmv-button--secondary:hover {
-    border-radius: 6px;
+    border-radius: unset;
 }
 .vmv-button--primary:hover {
     // color: #caa59c;
     border-color: #AF786A;
-    background: rgba(0, 0, 0, .8);
+    background: #361127;
 
 }
 .vmv-button--secondary:hover {
@@ -261,19 +255,19 @@ hr::after {
     background: transparent;
 }
 .vmv-header.sticky-solid {
-    background-color: colors.$color-white;
+    background-color: $color-white;
     border-bottom: 5px solid #AF786A; 
     padding-top: 4px;
     padding-bottom: 4px;
 }
 .vmv-header.inlayout-big {
     border-bottom: 5px solid #AF786A; 
-    background-color: colors.$color-white;
+    background-color: $color-white;
 
 }
 .vmv-header.inlayout-small {
     border-bottom: 5px solid #AF786A;
-    background-color: colors.$color-white;
+    background-color: $color-white;
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -299,7 +293,7 @@ hr::after {
     font-weight: 500;
     font-style: normal;
     // font-size: 26px;
-    color: colors.$color-black;
+    color: $color-black;
     padding: 16px 36px;
     text-align: center;
     border-radius: 6px;
@@ -361,7 +355,7 @@ hr::after {
     font-weight: 500;
     font-style: normal;
     // font-size: 26px;
-    color: colors.$color-black;
+    color: $color-black;
     padding: 16px 56px 16px 36px;
     text-align: center;
     border-radius: 6px;
@@ -378,7 +372,7 @@ hr::after {
     height: 0;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-top: 10px solid colors.$color-black;
+    border-top: 10px solid $color-black;
     position: absolute;
     right: 32px;
     top: calc(50% - 6px);
@@ -398,7 +392,7 @@ hr::after {
     height: 0;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-top: 10px solid colors.$color-black;
+    border-top: 10px solid $color-black;
     position: absolute;
     right: 32px;
     top: calc(50% - 5px); 
@@ -410,7 +404,7 @@ hr::after {
     opacity: 0;}
 .navbar__dropdown-children {
     transition: visibility .2s, opacity .2s;
-    background: colors.$color-black;
+    background: $color-black;
     padding: 8px;
     position: absolute;
     top: calc(100% + 10px);
@@ -482,7 +476,7 @@ hr::after {
     flex-direction: column;
     justify-content: center;
     padding: $feature-padding;
-    background-image: linear-gradient(180deg, rgba(0,0,0,0.00) 0%, colors.$color-black 100%);
+    background-image: linear-gradient(180deg, rgba(0,0,0,0.00) 0%, $color-black 100%);
     box-sizing: border-box;
     backdrop-filter: blur(10px);
 }
@@ -505,7 +499,7 @@ hr::after {
     text-decoration: none;
     padding: 16px 36px;
     border-radius: 6px;
-    border: 1px solid colors.$color-white;
+    border: 1px solid $color-white;
     display: inline-block;
     align-self: center;
     border: 1px solid transparent;
@@ -527,7 +521,7 @@ hr::after {
 .feature-header__logo {
     width: 300px;
     height: 160px;
-    background-color: colors.$color-black;
+    background-color: $color-black;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -539,19 +533,19 @@ hr::after {
     left: 100%;
     bottom: 0;
     content: '';
-    border-top: 160px solid colors.$color-black;
+    border-top: 160px solid $color-black;
     border-right: 80px solid transparent;
 }
 .feature-header__logo svg {
     height: 105px;
 }
 .feature-header__logo path {
-    fill: colors.$color-white;
+    fill: $color-white;
 }
 .feature-header__title {
     font-size: 80px;
     text-shadow: 0 2px 4px rgba(0,0,0,0.40);
-    color: colors.$color-white;
+    color: $color-white;
 
 }
 .feature-hero {
@@ -646,7 +640,7 @@ hr::after {
     margin-bottom: 120px;
 }
 .tours__blurb {
-    max-width: 550px;
+    max-width: 600px;
 }
 .tours__text {
     padding: 140px 80px;
@@ -666,16 +660,18 @@ hr::after {
 .tours__button {
     font-size: 24px;
     font-style: italic;
-    color: colors.$color-black;
+    color: $color-black;
     text-decoration: none;
     padding: 16px 36px;
     border-radius: 6px;
-    border: 1px solid  colors.$color-white;
+    // border: 1px solid  $color-white;
     display: inline-block;
     align-self: center;
-    border: 1px solid transparent;
+    // border: 1px solid transparent;
     border-radius: 6px;
     transition: all .3s;
+    border: 1px solid black;
+    background: rgba(255,255,255, .13);
 }
 .tours__button:hover {
     border: 1px solid #AF786A;
@@ -713,17 +709,19 @@ hr::after {
 .weddings__button {
     font-size: 24px;
     font-style: italic;
-    color: colors.$color-black;
+    color: $color-black;
     text-decoration: none;
     padding: 16px 36px;
     border-radius: 6px;
-    border: 1px solid colors.$color-white;
+    border: 1px solid $color-white;
     display: inline-block;
     align-self: center;
     border: 1px solid transparent;
     border-radius: 6px;
     transition: all .3s;
     margin: 0 auto;
+    border: 1px solid black;
+    background: rgba(255,255,255, .13);
 }
 .weddings__button:hover {
     border: 1px solid #AF786A;
@@ -801,97 +799,14 @@ hr::after {
     padding: 20px 40px 0px;
     margin-bottom: 40px;
 }
-.wine-card__container > .wine-card {
+.wine-card__container > .c-WineCard {
     flex: 1 0 48%;
     flex-basis: calc(48% - 64px);
 }
-.wine-card {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    margin: 0px 32px 32px;
-    padding: 24px;
-    border-radius: 6px;
-    transition: box-shadow .3s;
-    position: relative;
-    border: 1px solid #af786a;
-}
-.wine-card:hover {
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-}
-.wine-card__image {
-    // max-height: 500px;
-    // border: 1px solid black;
-    width: 260px;
-    height: auto;
-    align-self: flex-start;
-}
-.wine-card.dominion img {
-    border: 1px solid colors.$color-black;
-}
-.wine-card__title {
-    margin-bottom: 12px;
-}
-.wine-card__body {
-    display: flex;
-    flex-direction: column;
-    padding: 12px 24px;
-}
-.wine-card__description {
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 1.3;
-    max-width: 500px;
-    margin-bottom: 20px;
-}
-.wine-card__fine-print {
-    margin-bottom: 24px;
-    font-size: 16px;
-}
-.wine-card__buy {
-    display: flex;
-}
-.wine-card__quantity {
-    margin-right: 24px;
-    border: 1px solid colors.$color-black;
-    padding: 0.25em 0.5em;
-    font-size: 20px;
-    cursor: pointer;
-    line-height: 1.1;
-    background-color: colors.$color-white;
-    display: grid;
-    grid-template-areas: "select";
-    align-items: center;
-    min-width: 65px;
-}
-.wine-card__quantity::after {
-    content: "";
-    width: 0.8em;
-    height: 0.5em;
-    background-color: colors.$color-black;
-    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
-    justify-self: end;
-  }
-.wine-card select, .wine-card__quantity::after {
-    grid-area: select;
-}
-.wine-card select {
-    // A reset of styles, including removing the default dropdown arrow
-    appearance: none;
-    // Additional resets for further consistency
-    background-color: transparent;
-    border: none;
-    padding: 0 1em 0 0;
-    margin: 0;
-    width: 100%;
-    font-family: inherit;
-    font-size: inherit;
-    cursor: inherit;
-    line-height: inherit;
-    outline: none;
-}
-.wine-card__button {
 
+.c-footer {
+    width: 100vw;
+    height: 400px;
+    background: black;
 }
-
 

@@ -1,7 +1,0 @@
-@use '../01-tools/typeMixins';
-
-a, .link {  
-  font-size: typeMixins.least-squares-fit((400px: 18px, 1700px: 26px, 3600px: 32px));
-  line-height: 1.2;
-  // font-size: clamp(2.25rem, 4vw, 5rem);
-}

@@ -1,0 +1,27 @@
+@import 'variables';
+@import 'mixins';
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+p {  
+    font-size: least-squares-fit((400px: 22px, 1500px: 26px, 1400px: 32px));
+    line-height: 1.2;
+  }
+  h1 {  
+    font-size: least-squares-fit((400px: 36px, 1200px: 60px, 1400px: 70px, 2400px: 80px));
+  }
+  h2 {  
+    font-size: least-squares-fit((400px: 48px, 1200px: 56px, 1400px: 72px, 2400px: 74px));
+    font-style: italic;
+    letter-spacing: 3px;
+    text-align: center;
+  }
+  a, .link {  
+    font-size: least-squares-fit((400px: 18px, 1700px: 26px, 3600px: 32px));
+    line-height: 1.2;
+    // font-size: clamp(2.25rem, 4vw, 5rem);
+  }
+  

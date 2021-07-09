@@ -39,14 +39,14 @@ const WineList = (props) => {
             <>
                 <h2 className={'dark'}>Dominion Series</h2>
                 <p className={'text-subheading'}>Fun, unique, and creative blends. The Dominion Series highlights the variety and quality of our grapes.</p>
-                <ul className={'wine-card__container'}>
+                <ul className={'o-flexGrid'}>
                     {wines.filter(wine => wine.wineMakerNote === "Dominion").map(item => (
                         <WineCard item={item}></WineCard>
                     ))}
                     {/* {JSON.stringify(wines)} */}
                 </ul>
                 <h2 className={'dark'}>Estate Series</h2>
-                <p>The Estate Series represents the best of Virginia Mountain Vineyards.</p>
+                <p className={'text-subheading'}>The Estate Series represents the best of Virginia Mountain Vineyards.</p>
                 <ul className={'wine-card__container'}>
                     {wines.filter(wine => wine.wineMakerNote === "Estate").map(item => (
                         <WineCard item={item}></WineCard>
