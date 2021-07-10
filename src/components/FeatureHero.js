@@ -2,7 +2,7 @@ import React from 'react';
 
 const FeatureHero = (props) => {
   return (
-    <div className={`feature-hero`} style={{ backgroundImage: `url(${props.image})` }}>
+    <div className={`feature-hero ${props.anchorTo}`} style={{ backgroundImage: `url(${props.image})` }}>
     </div>
   )
 }

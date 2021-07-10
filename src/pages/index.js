@@ -6,19 +6,19 @@ import Launchbar from "../components/features/Launchbar";
 import ToursFeature from "../components/features/Tours";
 import WeddingsFeature from "../components/features/Weddings";
 import ViewsFeature from "../components/features/Views";
+import EventsFeature from "../components/features/Events";
 
 const IndexPage = (props) => {
   return (
     <>
       <title>Home Page</title>
-      {/* <Layout location={props.path} headerType="floating"> */}
       <Hero></Hero>
       <WineExperienceFeature></WineExperienceFeature>
       <Launchbar></Launchbar>
       <ToursFeature></ToursFeature>
       <WeddingsFeature></WeddingsFeature>
+      <EventsFeature></EventsFeature>
       <ViewsFeature></ViewsFeature>
-      {/* </Layout> */}
     </>
   )
 }

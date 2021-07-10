@@ -5,6 +5,7 @@ import FeatureHero from "../components/FeatureHero";
 import HorizontalDivider from "../components/HorizontalDivider";
 import WineList from "../components/WineList"
 import Layout from "../components/layout"
+import WinesHero from '../images/tastings-hero.webp'
 
 
 const Wines = (props) => {
@@ -14,9 +15,8 @@ const Wines = (props) => {
       <title>Home Page</title>
       {/* <Layout location={props.path} headerType="regular"> */}
       <FeatureHeader title="Wines"></FeatureHeader>
-      <div className="placeholder">
-        <p><strong>curate hero image</strong></p>
-
+      <FeatureHero image={WinesHero}></FeatureHero>
+      <div className="l-two-column">
         <p>
           The winemaking philosophy at Virginia Mountain Vineyards is to allow
           the quality of the grapes grown in our vineyard to shine in every wine.

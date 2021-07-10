@@ -8,10 +8,20 @@
     margin-bottom: 40px;
 }
 .o-flexObject--50 {
+    flex: 1 0 50%;
+    flex-basis: calc(50%);
+}
+.o-flexObject--48 {
     flex: 1 0 48%;
     flex-basis: calc(48% - 64px);
 }
 .o-flexObject--33 {
     flex: 1 0 32%;
     flex-basis: calc(32% - 64px);
+}
+.l-two-column {
+    column-count: 2;
+    padding: 60px 80px;
+    column-gap: 56px;
+
 }

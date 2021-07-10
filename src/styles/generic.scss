@@ -8,20 +8,50 @@
 
 p {  
     font-size: least-squares-fit((400px: 22px, 1500px: 26px, 1400px: 32px));
-    line-height: 1.2;
+    line-height: 1.3;
+    font-family: FreightDispProMedium-Regular;
+    letter-spacing: 1.35px;
   }
+p:first-of-type:not(:last-of-type) {
+  // text-indent: 50px;
+}
+p:not(:last-of-type) {
+  margin-bottom: 24px;
+}
+p:first-child:first-letter {
+  font-size: 150%;
+  font-weight: bold;
+}
   h1 {  
     font-size: least-squares-fit((400px: 36px, 1200px: 60px, 1400px: 70px, 2400px: 80px));
   }
   h2 {  
     font-size: least-squares-fit((400px: 48px, 1200px: 56px, 1400px: 72px, 2400px: 74px));
     font-style: italic;
+    letter-spacing: -1px;
+    text-align: center;
+    font-family: FreightDispProBook-Italic;
+    // font-size: 58px;
+    color: #FFFFFF;
     letter-spacing: 3px;
     text-align: center;
+    font-weight: 400;
+    color: $color-white;
+    &.shadow {
+      text-shadow: 0 2px 4px rgba(0,0,0,0.50);
+    }
   }
+
   a, .link {  
-    font-size: least-squares-fit((400px: 18px, 1700px: 26px, 3600px: 32px));
+    font-size: least-squares-fit((400px: 20px, 1300px: 26px, 3600px: 32px));
     line-height: 1.2;
+    font-family: FreightDispProSemibold-Regular;
+    letter-spacing: 0.23px;
+    line-height: 23px;
     // font-size: clamp(2.25rem, 4vw, 5rem);
   }
+strong {
+  text-decoration: underline;
+}
+
   
