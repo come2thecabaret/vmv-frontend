@@ -58,6 +58,7 @@
     grid-template-areas: "select";
     align-items: center;
     min-width: 65px;
+    border-radius: 6px;
 }
 .c-WineCard select, .c-WineCard-quantity::after {
     grid-area: select;

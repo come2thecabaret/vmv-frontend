@@ -856,4 +856,39 @@ hr::after {
     height: 400px;
     background: black;
 }
-
+.tours-photo-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    align-items: stretch;
+    height: 400px;
+}
+.tours-photo-grid__item {
+    flex: 1 0 33%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.tours-photo-grid__item:nth-child(1) {
+    background-image: url('../images/tours-thumb-1.jpg');
+}
+.tours-photo-grid__item:nth-child(2) {
+    background-image: url('../images/tours-thumb-2.jpg');
+   
+}
+.tours-photo-grid__item:nth-child(3) {
+    background-image: url('../images/tours-thumb-3.jpg');    
+}
+.tours-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+}
+.tours-body__image {
+    margin-right: 20px;
+}
+.tours-body__text {
+    padding: 60px 80px;
+}
