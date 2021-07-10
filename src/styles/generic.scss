@@ -22,6 +22,10 @@ p:first-child:first-letter {
   font-size: 150%;
   font-weight: bold;
 }
+p.xl:first-of-type::first-letter {
+  font-size: 150%;
+  font-weight: bold;
+}
   h1 {  
     font-size: least-squares-fit((400px: 36px, 1200px: 60px, 1400px: 70px, 2400px: 80px));
   }
@@ -31,6 +35,7 @@ p:first-child:first-letter {
     letter-spacing: -1px;
     text-align: center;
     font-family: FreightDispProBook-Italic;
+    position: relative;
     // font-size: 58px;
     color: #FFFFFF;
     letter-spacing: 3px;
@@ -51,7 +56,7 @@ p:first-child:first-letter {
     // font-size: clamp(2.25rem, 4vw, 5rem);
   }
 strong {
-  text-decoration: underline;
+  // text-decoration: underline;
 }
 
   

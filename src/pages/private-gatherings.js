@@ -19,7 +19,7 @@ const PrivateGatherings = (props) => {
         Virginia Mountain Vineyards is a wonderful place to host your next party or
         private gathering.  Helping to realize your dream event is our goal!
       </div>
-      <div className="text-subheading--big">
+      {/* <div className="text-subheading--big">
         <p>
           We have a wonderful <strong>Event Center</strong> to host both small and large gatherings.
           Whether you are celebrating personal milestones like birthdays or anniversaries
@@ -27,7 +27,7 @@ const PrivateGatherings = (props) => {
           Vineyards can provide a gorgeous venue with <strong>panoramic mountain views</strong> in a pastoral
           setting.
         </p>
-      </div>
+      </div> */}
       <div className="l-two-column">
         <p>
           Our Event Center is a <strong>large, tri-peaked tent (80 feet by 40 feet)</strong> on a <strong>stunning paved

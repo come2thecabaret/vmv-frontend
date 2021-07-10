@@ -7,8 +7,9 @@ const WineCard = function (props) {
         <li key={props.item.id} className={`c-WineCard ${series} o-flexObject--33`}>
             <img src={props.item.img} alt="props.item.name" className={'c-WineCard-image'} />
             <div className={'c-WineCard-body'}>
-                <h3 className={'c-WineCard-title dark'}>{props.item.name}</h3>
+                <h3 className={'c-WineCard-title '}>{props.item.name}</h3>
                 <p className={'c-WineCard-description'}>{props.item.description}</p>
+                <div className={'c-WineCard-price'}>${props.item.price}</div>
                 <div className={'c-WineCard-fineprint'}>{props.item.bottleSize.ml} ml / {props.item.abv}% abv</div>
                 <div className={'c-WineCard-buy'}>
                     <div className={'c-WineCard-quantity'}>

@@ -52,6 +52,12 @@ $feature-blurb-bottom-margin: 22px;
 p {
     max-width: 800px;
 }
+p.xl {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 80px;
+
+}
 h1 {
     @include font-heading-1();
     &.dark {
@@ -75,6 +81,9 @@ h2 {
     &.spaced-right {
         margin-right: 80px;
     }
+    &.spaced-top {
+        padding-top: 42px;
+    }
     &.spaced-bottom {
         margin-bottom: 36px !important;
     }
@@ -96,9 +105,13 @@ h3 {
     max-width: 1200px;
     padding: 36px 48px;
     font-family: FreightDispProBold-Regular;
-    font-size: 36px;
+    font-size: 42px;
     color: #000000;
     text-align: center;
+    position: relative;
+    &.light {
+        color: #ffffff;
+    }
 }
 .text-subheading--small {
     @include font-subheading();
@@ -475,6 +488,7 @@ hr::after {
 .navbar__dropdown-children li a {
     color: white;
     padding: 16px 36px;
+    display: block;
 }
 /* hero */
 .vmv-hero {
@@ -792,11 +806,12 @@ hr::after {
     margin-bottom: 20px;
 }
 .views {
-    height: 600px;
+    height: 1000px;
+    max-height: 100vh;
     width: 100%;
-    background-image: url('../images/down-the-vines.jpg');    
+    background-image: url('../images/erins-view.jpg');    
     background-size: cover;
-    background-position: center top;
+    background-position: center 10%;
     background-repeat: no-repeat;
     padding: 60px 60px;
     position: relative;
@@ -845,6 +860,16 @@ hr::after {
     padding-inline-start: 0;
     padding: 20px 40px 0px;
     margin-bottom: 40px;
+    position: relative;
+}
+.wine-card__container::after {
+        content: "";
+        position: relative;
+        flex-grow: 1;
+        flex: 1 1 48%;
+    flex-basis: calc(48% - 64px);
+    margin: 0px 32px 32px;
+    padding: 24px;
 }
 .wine-card__container > .c-WineCard {
     flex: 1 0 48%;
