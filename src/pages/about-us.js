@@ -15,7 +15,7 @@ const AboutUs = (props) => {
       <div className="placeholder">
         <p>
           Virginia Mountain Vineyards is located in the town of Fincastle,
-          Virginia which was founded in 1772.  Fincastle is in
+          Virginia which was founded in 1772.  Fincastle is <strong> the county seat</strong> in
           the historical County of Botetourt.  In the late 18th and early 19th
           centuries, Botetourt County was the third largest county in the United
           States and was comprised of portions of West Virginia, Kentucky, Ohio,
@@ -23,7 +23,7 @@ const AboutUs = (props) => {
           County is a great tourist destination for hiking, camping, river rafting,
           other outdoor sports, and fans of great American history.
         </p>
-        <p><strong>Either insert old map, or old map faded behind text?</strong></p>
+        <p><strong>swap paragraphs and put above map</strong></p>
         {/* https://www.loc.gov/resource/gvhs01.vhs00342/?r=-0.924,-0.369,2.847,1.779,0 */}
         <p>
           Virginia Mountain Vineyards, a winery and vineyard, is part of the
@@ -44,7 +44,7 @@ const AboutUs = (props) => {
         <p>
           In 2018, Virginia Mountain Vineyards was purchased by new owners, Brian Weber
           and Jacqui Sobieski.  Their focus has been creating a winery destination for
-          wine lovers and those looking for a stunning location for weddings
+          wine lovers <strong>what about newbies and friendly place</strong>and those looking for a stunning location for weddings
           and special events.  They have also emphasized quality winemaking
           practices as they strive to make Virginia Mountain Vineyards known for producing
           some of the best and most unique wines.

@@ -27,12 +27,12 @@ const Tours = (props) => {
         </div>
         <div className="tours-body__text">
           <p>
-            We are now offering a <strong>tour each weekend</strong>
+            We are now offering a <strong>tour each weekend </strong>
             to bring our guests closer to the magic of the vineyard and the mysteries
             of the winemaking process.  Our tours help guests understand what it takes
             to go from vines to award-winning wines.  We love sharing our experiences
             and our passion  -  making great wine!</p>
-          <p>Please check for <strong>dates and times on our Facebook page</strong> or contact us at
+          <p>Please check for dates and times on our <strong>Facebook page</strong> or contact us at
             info@vmvines.com or (540) 473-2979 to reserve your place on the Tour.
             If you do not have a reservation in advance, please check with us when
             you visit to see if we are conducting a Tour that day.  We would love

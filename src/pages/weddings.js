@@ -13,11 +13,11 @@ const Weddings = (props) => {
       {/* <Layout location={props.path} headerType="regular"> */}
       <FeatureHeader title="Weddings"></FeatureHeader>
       <div><strong>need hero image</strong></div>
-      <div className="placeholder">
-        <p>
-          Many dream of having their wedding in a vineyard!  Virginia Mountain
-          Vineyards can make that dream come true.
-        </p>
+      <div className={'text-subheading'}>
+        Many dream of having their wedding in a vineyard.<br />Virginia Mountain
+        Vineyards can make that dream come true.
+      </div>
+      <div className="l-two-column">
         <p>Our vineyard offers a gorgeous,
           outdoor chapel setting surrounded by grapevines and lined with our famous
           red rose bushes.  Our reception venue is a wonderful, large stone patio
@@ -32,10 +32,11 @@ const Weddings = (props) => {
           Vineyards, download a brochure below. Or, if you are ready to schedule a visit,
           please fill out the following contact form and we will be in touch with you as quickly as possible.
         </p>
-        <button>(button to download brochure)</button>
-        <div><strong>wedding intake/interest form</strong></div>
-        <div><strong>pics/mosaic/gallery?</strong></div>
+
       </div>
+      <button>(button to download brochure)</button>
+      <div><strong>wedding intake/interest form</strong></div>
+      <div><strong>pics/mosaic/gallery?</strong></div>
 
       {/* </Layout> */}
     </>

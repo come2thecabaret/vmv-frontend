@@ -24,7 +24,7 @@ const TastingsPage = (props) => {
           Wine tasting is one of the most unique and enjoyable experiences.  Tasting award-winning
           wine in a gorgeous mountain-view setting with friends is truly sublime.  Your experience
           at Virginia Mountain Vineyards will include access to our best wines in a relaxed, outdoor
-          setting. Our guests can choose between Wine Flights (choice of any 4 wines) or Wine and Chocolate Pairings.
+          setting. Our guests can choose between Wine Flights (choice of any 4 wines) or Wine and Chocolate Pairings <strong>add something making it clear that you can get more (a whole bottle)</strong>.
         </p>
         <p className="">
           To make your wine tasting experience perfect, we also offer some food selections.  We have wonderful

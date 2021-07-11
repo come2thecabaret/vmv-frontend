@@ -104,7 +104,7 @@ h3 {
     margin: 0 auto;
     max-width: 1200px;
     padding: 36px 48px;
-    font-family: FreightDispProBold-Regular;
+    font-family: FreightDispProSemiBold-Regular;
     font-size: 42px;
     color: #000000;
     text-align: center;
@@ -296,7 +296,7 @@ hr::after {
     justify-content: space-between;
     padding: 18px 22px;
     z-index: 999;
-    transition: background-color .2s, padding .3s;
+    transition: background-color .3s, padding .5s ease-out;
     text-decoration: none;
 }
 
