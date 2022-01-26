@@ -1,11 +1,11 @@
-import * as React from "react"
-import Layout from "../components/layout"
+import * as React from "react";
+import Layout from "../components/layout";
 import Hero from "../components/features/Hero";
 import WineExperienceFeature from "../components/features/WineExperience";
 import Launchbar from "../components/features/Launchbar";
 import ToursFeature from "../components/features/Tours";
 import WeddingsFeature from "../components/features/Weddings";
-import ViewsFeature from "../components/features/Views";
+import Footer from "../components/Footer";
 import EventsFeature from "../components/features/Events";
 
 const IndexPage = (props) => {
@@ -18,9 +18,9 @@ const IndexPage = (props) => {
       <ToursFeature></ToursFeature>
       <WeddingsFeature></WeddingsFeature>
       <EventsFeature></EventsFeature>
-      <ViewsFeature></ViewsFeature>
+      {/* <Footer></Footer> */}
     </>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;

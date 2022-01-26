@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="583px" height="42px" viewBox="0 0 583 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 3</title>
+    <g id="Latest" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Private-Gatherings" transform="translate(-429.000000, -1207.000000)">
+            <g id="Group-3" transform="translate(430.000000, 1207.000000)">
+                <path d="M290.5,0 L302,21 L290.5,42 L279,21 L290.5,0 Z" id="Combined-Shape" fill="#AF786A"></path>
+                <line x1="313.5" y1="20.5" x2="581" y2="21" id="Line" stroke="#666666" stroke-width="2" stroke-linecap="square"></line>
+                <line x1="0.5" y1="20.5" x2="268" y2="21" id="Line-Copy" stroke="#666666" stroke-width="2" stroke-linecap="square"></line>
+            </g>
+        </g>
+    </g>
+</svg>

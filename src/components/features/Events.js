@@ -35,10 +35,28 @@ const EventsFeature = (props) => {
       link: "https://www.google.com"
     },
   ]
+  const eventsList = events.map((event, index) => {
+    let options = { month: 'short'};
+    let month = new Intl.DateTimeFormat('en-US', options).format(event.date).toUpperCase()
+    return (
+      <div className={'events__item'} key={index}>
+        <div className={'events__item-date'}>
+        <div className={'events__item-date-month'}>{month}</div>
+        <div className={'events__item-date-day'}>{event.date.getDate()}</div>
+        </div>
+        <div className={'events__item-info'}>
+          <div className={'events__item-info-title'}>{event.title}</div>
+          <div className={'events__item-info-description'}>{event.description}</div>
+          <a className={'events__item-info-link'}>Event Details  &gt;</a>
+        </div>
+      </div>
+    )
+  })
   return (
     <section className={'c-EventsFeature'}>
       <div className={'o-flexObject--50 c-EventsFeature-section upcoming-events'}>
         <h2 className={'c-EventsFeature-header spaced-bottom shadow'}>Upcoming Events</h2>
+        {eventsList}
       </div>
       <div className={'o-flexObject--50 c-EventsFeature-section private-gatherings'}>
         <h2 className={'c-EventsFeature-header spaced-bottom shadow'}>Private Gatherings</h2>

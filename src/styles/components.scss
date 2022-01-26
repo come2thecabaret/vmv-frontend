@@ -1,191 +1,352 @@
-@import 'variables.scss';
+@import "variables.scss";
 .wine-list {
-    // background: black;
+  // background: black;
 }
 /* Wine Card */
 .c-WineCard {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    margin: 0px 32px 32px;
-    padding: 24px;
-    border-radius: 2px;
-    transition: box-shadow .3s, border .3s, background-color .3s;
-    position: relative;
-    border: 1px solid rgba(175, 120, 106, .3);
-    background-color: white;
-    &.dominion img {
-        border: 1px solid #AF786A;
-        align-self: center;
-    }
-    background-color: rgba(255,255,255,.4);
-    backdrop-filter: blur(4px);
-    color: black;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 0px 32px 32px;
+  padding: 24px;
+  border-radius: 2px;
+  transition: box-shadow 0.3s, border 0.3s, background-color 0.3s;
+  position: relative;
+  border: 1px solid rgba(175, 120, 106, 0.3);
+  background-color: white;
+  &.dominion img {
+    border: 1px solid #af786a;
+    align-self: center;
+  }
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(4px);
+  color: black;
 }
 .c-WineCard:hover {
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
-    background-color: rgba(255,255,255,.7);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
+  background-color: rgba(255, 255, 255, 0.7);
 
-    // border: 1px solid rgba(175, 120, 106, .9);
+  // border: 1px solid rgba(175, 120, 106, .9);
 }
 .c-WineCard-image {
-    // max-height: 500px;
-    // border: 1px solid black;
-    width: 260px;
-    height: auto;
-    align-self: flex-start;
-    margin: 8px;
+  // max-height: 500px;
+  // border: 1px solid black;
+  width: 260px;
+  height: auto;
+  align-self: flex-start;
+  margin: 8px;
 }
 .c-WineCard.dominion {
-    background-color: rgba(255,255,255,.4);
-    color: black;
+  background-color: rgba(255, 255, 255, 0.4);
+  color: black;
 }
 .c-WineCard.dominion:hover {
-    background-color: rgba(255,255,255,.7);
+  background-color: rgba(255, 255, 255, 0.7);
 }
 .c-WineCard-title {
-    margin-bottom: 12px;   
-    letter-spacing: 1.1px;
-    color: black;
+  margin-bottom: 12px;
+  letter-spacing: 1.1px;
+  color: black;
 }
 .c-WineCard.dominion .c-WineCard-title {
-    color: $color-black;
+  color: $color-black;
 }
 .c-WineCard-body {
-    display: flex;
-    flex-direction: column;
-    padding: 12px 24px;   
+  display: flex;
+  flex-direction: column;
+  padding: 12px 24px;
 }
 .c-WineCard-description {
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 1.3;
-    max-width: 500px;
-    margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.3;
+  max-width: 500px;
+  margin-bottom: 20px;
 }
 .c-WineCard-price {
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 1.3;
-    max-width: 500px;
-    margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.3;
+  max-width: 500px;
+  margin-bottom: 20px;
 }
 .c-WineCard-fineprint {
-    margin-bottom: 24px;
-    font-size: 16px;
+  margin-bottom: 24px;
+  font-size: 16px;
 }
 .c-WineCard-quantity {
-    margin-right: 24px;
-    border: 1px solid $color-black;
-    padding: 0.25em 0.5em;
-    font-size: 20px;
-    cursor: pointer;
-    line-height: 1.1;
-    background-color: $color-white;
-    display: grid;
-    grid-template-areas: "select";
-    align-items: center;
-    min-width: 65px;
-    border-radius: 6px;
+  margin-right: 24px;
+  border: 1px solid $color-black;
+  padding: 0.25em 0.5em;
+  font-size: 20px;
+  cursor: pointer;
+  line-height: 1.1;
+  background-color: $color-white;
+  display: grid;
+  grid-template-areas: "select";
+  align-items: center;
+  min-width: 65px;
+  border-radius: 6px;
 }
-.c-WineCard select, .c-WineCard-quantity::after {
-    grid-area: select;
+.c-WineCard select,
+.c-WineCard-quantity::after {
+  grid-area: select;
 }
 .c-WineCard-quantity::after {
-    content: "";
-    width: 0.8em;
-    height: 0.5em;
-    background-color: $color-black;
-    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
-    justify-self: end;
+  content: "";
+  width: 0.8em;
+  height: 0.5em;
+  background-color: $color-black;
+  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+  justify-self: end;
 }
 .c-WineCard select {
-    appearance: none;
-    background-color: transparent;
-    border: none;
-    padding: 0 1em 0 0;
-    margin: 0;
-    width: 100%;
-    font-family: inherit;
-    font-size: inherit;
-    cursor: inherit;
-    line-height: inherit;
-    outline: none;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  padding: 0 1em 0 0;
+  margin: 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+  outline: none;
 }
 .c-WineCard-buy {
-    display: flex;
+  display: flex;
 }
 /* Events */
 .c-EventsFeature {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
 .c-EventsFeature-section {
-    padding: $feature-padding;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: relative;
+  padding: $feature-padding;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
 .c-EventsFeature-section::after {
-    content: '';
-    position: absolute;
-    top:0;
-    right: 0;
-    bottom: 20px;
-    left: 0;
-    background-image: linear-gradient(180deg, rgba(0,0,0,0.53) 0%, rgba(0,0,0,0.53) 24%, rgba(0,0,0,0.51) 39%, rgba(0,0,0,0.42) 48%, rgba(0,0,0,0.00) 68%);
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 20px;
+  left: 0;
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.53) 0%,
+    rgba(0, 0, 0, 0.53) 24%,
+    rgba(0, 0, 0, 0.51) 39%,
+    rgba(0, 0, 0, 0.42) 48%,
+    rgba(0, 0, 0, 0) 68%
+  );
 }
 .c-EventsFeature-section.upcoming-events {
-    background-image: url(../images/upcoming-events-pattern-teal.jpg);
+  background-image: url(../images/upcoming-events-pattern-teal.jpg);
+  z-index: 0;
 }
 .c-EventsFeature-section.private-gatherings {
-    background-image: url(../images/private-gatherings-pattern-copper.jpg);
-    color: $color-white;
+  background-image: url(../images/private-gatherings-pattern-copper.jpg);
+  color: $color-white;
+  z-index: 0;
 }
 .c-EventsFeature-header {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 .c-EventsFeature-blurb {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 .wine-sublist--dominion {
-    background-image: url('../images/upcoming-events-pattern-teal.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    backdrop-filter: blur(2px);
-    position: relative;
+  background-image: url("../images/upcoming-events-pattern-teal.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(2px);
+  position: relative;
 }
 .wine-sublist--dominion::before {
-    position: absolute;
-    content: '';
-    left: 0;
-    top: 0;
-    right: 0;
-    height: 150px;
-    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.9514180672268907) 26%, rgba(255,255,255,0.7049194677871149) 45%, rgba(255,255,255,0) 100%);
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 150px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0.9514180672268907) 26%,
+    rgba(255, 255, 255, 0.7049194677871149) 45%,
+    rgba(255, 255, 255, 0) 100%
+  );
 }
 
-    .wine-sublist--estate {
-    // background-image: url('../images/private-gatherings-pattern-copper.jpg');
-    background-image: url('../images/upcoming-events-pattern-teal.jpg');
-
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    backdrop-filter: blur(2px);
-    position: relative;
+.wine-sublist--estate {
+  // background-image: url('../images/private-gatherings-pattern-copper.jpg');
+  background-image: url("../images/upcoming-events-pattern-teal.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(2px);
+  position: relative;
 }
 .wine-sublist--estate::before {
-    position: absolute;
-    content: '';
-    left: 0;
-    top: 0;
-    right: 0;
-    height: 150px;
-    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.9514180672268907) 26%, rgba(255,255,255,0.7049194677871149) 45%, rgba(255,255,255,0) 100%);
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 150px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0.9514180672268907) 26%,
+    rgba(255, 255, 255, 0.7049194677871149) 45%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.weddings-hero-container {
+  width: 100%;
+  position: relative;
+}
+.weddings-hero-image {
+  width: 100%;
+}
+.weddings-hero-container::after {
+  content: "";
+  position: absolute;
+  height: 325px;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.82) 21%,
+    rgba(255, 255, 255, 0.9) 34%,
+    #ffffff 100%
+  );
+}
+.text-subheading.weddings {
+  z-index: 9;
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - (1200px / 2));
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.footer {
+  width: 100%;
+  color: white;
+}
+.footer-splash {
+  width: 100%;
+  height: 1000px;
+  background-image: url(../images/view-from-patio.jpg);
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.footer-tagline {
+  font-family: FreightDispProBook-Regular;
+  font-size: 78px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 84px;
+  text-shadow: 0 2px 17px rgba(0, 0, 0, 0.5);
+  padding: 60px;
+}
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: black;
+  padding: 34px;
+}
+.footer-address,
+.footer-contact {
+  opacity: 0.9;
+  font-family: Optima-Bold;
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 32px;
+}
+
+.events__item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 24px;
+  border-radius: 3px;
+  margin-bottom: 16px;
+  transition: background-color 0.3s ease-in-out;
+}
+.events__item:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.events__item:hover .events__item-date {
+  background-color: rgba(175, 120, 106, 0.3);
+}
+.events__item-date {
+  color: #fff;
+  padding: 24px 16px;
+  //   background-color: rgba(255, 255, 255, 0.7);
+  border: 2px solid #af786a;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+.events__item-date-month {
+  font-family: Optima-Regular;
+  font-size: 26px;
+  //   color: #000000;
+  letter-spacing: 0.23px;
+  text-align: center;
+}
+.events__item-date-day {
+  font-family: Optima-Bold;
+  font-size: 29px;
+  // color: #000000;
+  letter-spacing: 2.15px;
+  text-align: center;
+}
+.events__item-info {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  flex-grow: 1;
+  padding: 8px 16px 8px 24px;
+}
+.events__item-info-title {
+  font-family: Optima-Bold;
+  //   font-family: FreightDispProBold-Regular;
+  font-size: 24px;
+  color: #ffffff;
+  letter-spacing: 0.21px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+.events__item-info-description {
+  font-size: 18px;
+  color: #ffffff;
+  letter-spacing: 0.14px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: Optima-Regular;
+  flex-grow: 1;
+}
+.events__item-info-link {
+  font-family: Optima-Bold;
+  font-size: 16px;
+  color: #ffffff;
+  letter-spacing: 0.14px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  align-self: flex-end;
 }
